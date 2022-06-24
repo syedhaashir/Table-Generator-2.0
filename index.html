@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <span><a href="#"></a></span> -->
+
+
+    <center>
+        <h1>TABLE GENERATOR</h1><br>   
+       Enter a Number for the table: <input type="number" min="0" id="a"><br><br>
+       Enter a Limit for the table: <input type="number" min="0" id="c"><br><br><br>
+    <div>
+      <!-- <button id="click" onclick="printTable();"></buttonid>Enter</button> -->
+    <span onclick="printTable();"><a></a></span>
+
+    </div>
+    <br>
+    <div id="result"></div>
+    </center>
+</body>
+<script>
+   function printTable() {
+    let a;
+    let result = "";
+    let c;
+
+    a = Number(document.getElementById("a").value);
+    c = Number(document.getElementById("c").value);
+    for (let i = 1; i <= c; i++) {
+
+        result = (`${result}    <p>    ${a}   x   ${i}   =   ${a * i}    </p>`);
+    }
+    document.getElementById("result").innerHTML ='Table of '+a+ ':<br>'+ result;
+}
+</script>
+</html>
